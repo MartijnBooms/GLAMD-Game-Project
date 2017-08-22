@@ -8,6 +8,7 @@ using Assets.Scripts.Helpers;
 using Assets.Scripts.Managers;
 using UnityEngine.SceneManagement;
 using Assets.Scripts.Utilities;
+using Assets.Scripts.ButtonHandlers;
 
 namespace Assets.Scripts.Controllers
 {
@@ -141,6 +142,12 @@ namespace Assets.Scripts.Controllers
 			set
 			{
 				GameManager.Instance.GuiManager.UpdateInhalerMeter((_inhalers = value) / (float)PickupController.MAX_NUMBER_OF_INHALERS);
+				if (_inhalers == PickupController.MAX_NUMBER_OF_INHALERS)
+				{
+					GameManager.Instance.GuiManager.ActivateInhalerButton
+						.GetComponent<InhalerButton>()
+						.ActivateInhalerButton();
+				}
 			}
 		}
 

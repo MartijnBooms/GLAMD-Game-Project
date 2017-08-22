@@ -50,6 +50,8 @@ namespace Assets.Scripts.Managers
 		[SerializeField]
 		private GameObject slowmotionBar;
 
+		public Button ActivateInhalerButton;
+
 		private float targetCoinDoublerMeter;
 		private float targetInhalerMeter;
 		private float targetSlowmotionMeter;

@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Enumerations;
+﻿using Assets.Scripts.ButtonHandlers;
+using Assets.Scripts.Enumerations;
 using Assets.Scripts.Managers;
 using System;
 using UnityEngine;
@@ -8,7 +9,7 @@ namespace Assets.Scripts.Controllers
 	public class PickupController
 		: MonoBehaviour
 	{
-		public const ushort MAX_NUMBER_OF_INHALERS = 6;
+		public const ushort MAX_NUMBER_OF_INHALERS = 2;
 		private const float COINDOUBLER_TIME = 2.5f;
 		private const float SLOWMOTION_TIME = 5.0f;
 		private const float SLOWMOTION_FACTOR = 0.5f;
